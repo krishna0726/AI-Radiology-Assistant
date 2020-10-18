@@ -1,0 +1,20 @@
+
+.navbar-coloring {
+    background-color: #3a3a3a;
+}
+    
+.site-header .navbar-nav .nav-link {
+    color: #d4d4d4;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+body {
+    margin-top: 5rem;
+}
