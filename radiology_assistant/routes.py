@@ -11,4 +11,4 @@ def search():
 
 @app.route("/report")
 def report():
-    return "Report Page"
+    return render_template("report.html")
