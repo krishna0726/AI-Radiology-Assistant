@@ -7,7 +7,7 @@ def home():
 
 @app.route("/search")
 def search():
-    return "Search Results Page"
+    return render_template("search.html")
 
 @app.route("/report")
 def report():

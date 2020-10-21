@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <style>
+        a.clickable-card,
+        a.clickable-card:hover {
+            color: inherit;
+        }   
+    </style>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+        <h1 class="display-4" style="font-size: xx-large;">Showing Search Results for "Disease 1"</h1>
+
+        {% for i in range(5) %}
+            <div class="row">
+                {% for i in range(5) %}
+                    <div class="col">
+                        <a href="#" class="clickable-card">
+                        <div class="card mt-3">
+                            <img class="card-img-top" src="{{ url_for('static', filename='images/sample_xray.jpg')}}" alt="Card image cap">
+                            <div class="card-body">
+                            <h5 class="card-title">Diseases</h5>
+                            <p class="card-text"><a href="#", target="_blank">Disease 1</a>, <a href="#", target="_blank">Disease 2</a>, <a href="#", target="_blank">Disease 3</a></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                {% endfor %}
+            </div>
+
+        {% endfor %}
+
+        <nav aria-label="Search Pagination">
+            <ul class="pagination my-4">
+            <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item" aria-current="page">
+                <span class="page-link">
+                2
+                <span class="sr-only">(current)</span>
+                </span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+            </ul>
+        </nav>
+
+    </div>
+
+{% endblock %}
