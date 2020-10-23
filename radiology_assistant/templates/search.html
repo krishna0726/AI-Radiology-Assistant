@@ -13,20 +13,16 @@
 {% block content %}
 
     <div class="container">
-        <h1 class="display-4" style="font-size: xx-large;">Showing Search Results for "Disease 1"</h1>
+        <h1 class="display-4 mb-4" style="font-size: xx-large;">Showing Search Results for "Disease 1"</h1>
 
-        {% for i in range(5) %}
+        {% for i in range(10) %}
             <div class="row">
-                {% for i in range(5) %}
+                {% for j in range(10) %}
                     <div class="col">
                         <a href="#" class="clickable-card">
-                        <div class="card mt-3">
-                            <img class="card-img-top" src="{{ url_for('static', filename='images/sample_xray.jpg')}}" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">Diseases</h5>
-                            <p class="card-text"><a href="#", target="_blank">Disease 1</a>, <a href="#", target="_blank">Disease 2</a>, <a href="#", target="_blank">Disease 3</a></p>
-                            </div>
-                        </div>
+
+                        <img class="rounded img-fluid mb-4" src="{{ url_for('static', filename='images/sample_xray.jpg')}}">
+
                         </a>
                     </div>
 
