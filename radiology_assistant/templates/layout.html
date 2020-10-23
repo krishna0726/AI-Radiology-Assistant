@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     {% block styles %}
     {% endblock %}
@@ -26,16 +28,25 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
+                    <div class="navbar-nav">
                         <a class="nav-item nav-link" href="{{url_for('home')}}">New Scan</a>
                     </div>
+                    <form class="my-auto d-inline w-100 mx-auto" style="max-width: 40%;">
+                        <div class="input-group">
+                            <input type="text" class="form-control border border-right-0" placeholder="Search For Disease">
+                            <span class="input-group-append">
+                                <button class="btn btn-light border border-left-0" type="button" style="background-color: white;">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+
                     <div class="navbar-nav">
-                        <form class="form-inline mt-2 mt-md-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search For Disease"
-                                aria-label="Search">
-                            <a class="btn btn-outline-light my-2 my-sm-0" href="{{url_for('search')}}">Search</a>
-                        </form>
+                        <a class="nav-item nav-link" href="#">Log In</a>
+                        <a class="nav-item nav-link" href="#">Create Account</a>
                     </div>
+
                 </div>
             </div>
         </nav>

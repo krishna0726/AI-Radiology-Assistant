@@ -26,3 +26,7 @@ body {
     border-radius: 3px;
     margin-bottom: 20px;
 }
+
+.container {
+    max-width: 100%;
+}
