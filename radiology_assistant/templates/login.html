@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <style>
+        html,
+        body {
+            height: 90%;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <main role="main" class="container d-flex h-100">
+        <div class="row mx-auto align-items-center">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                      <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="loginUsernameInput">Username</label>
+                              <input type="text" class="form-control" id="loginUsernameInput" aria-describedby="usernameHelp">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                              <input type="checkbox" class="form-check-input" id="rememberMe">
+                              <label class="form-check-label" for="rememberMe">Remember Me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Log In</button>
+                          </form>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
